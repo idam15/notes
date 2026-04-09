@@ -1,74 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    <title>Idam Notes</title>
-    
-    <style>
-        @font-face {
-            font-family: 'OnePieceFont';
-            src: url('one piece font.ttf') format('truetype');
-        }
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>IDAM NOTES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        h1 {
-            font-family: 'OnePieceFont', sans-serif;
-            color: #ff0000;
-            font-size: 70px;
-        }
+<link href="main.css" rel="stylesheet">
 
-    </style>
-        <title>IDAM NOTES</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face {
+    font-family: 'OnePieceFont';
+    src: url('onepiece.ttf') format('truetype');
+}
 
-        
-        <!-- CSS -->
-        <link href="main.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="site" id="page">
-            <a class="skip-link sr-only" href="#main">Skip to content</a>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
 
-            <!-- Options headline effects: .rotate | .slide | .zoom | .push | .clip -->
-            <section class="hero-section hero-section--image clearfix clip">
-                <div class="hero-section__wrap">
-                    <div class="hero-section__option">
-                        <img src="one-piece-character-3840x2160-15328.jpeg" alt="Hero section image" style="background-size: cover;">
-                    </div>
-                    <!-- .hero-section__option -->
+/* background */
+.hero {
+    background: url('bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="offset-lg-2 col-lg-8">
-                                <div class="title-01 title-01--11 text-center">
-                                    <h2 class="title__heading">
-                                        <span>IDAM</span>
-                                        <strong class="hero-section__words">
-                                            <span class="title__effect is-visible">NOTES</span>
-                                        </strong>
-                                    </h2>
-                                    <div class="title__description">Selamat datang di Catatan idam </div>
+h1 {
+    font-family: 'OnePieceFont', sans-serif;
+    color: red;
+    font-size: 60px;
+}
 
-                                    <!-- Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary
-                                    <div class="title__action"><a href="https://themewagon.com/themes/free-html5-splash-screen-template/" class="btn btn-success">Get the template</a></div> -->
-                                </div> <!-- .title-01 -->
-                            </div>
-                        </div>
-                        <br/>
-                        <br/>
-                        <div class="button-group">
-                          <a href="kerjaan.html" target="_blank" class="btn btn-outline-success button-sm">Kerjaan</a>
-                            <a href="yui.html" target="__blank" class="btn btn-outline-success button-sm">Keuangan</a>
-                            <a href="https://edjs.co.id/absensi/login.php" target="_blank" class="btn btn-outline-success button-sm">Profil</a>
-                        </div>
+.button-group a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+</style>
 
-                        <!-- JS -->
-                        <script src="assets/js/plugins/animate-headline.js"></script>
-                        <script src="assets/js/main.js"></script>
-                    </div>
-                </div>
-            </section>
+</head>
+
+<body>
+
+<div class="hero">
+    <div>
+        <h1>IDAM NOTES</h1>
+        <p>Selamat datang di Catatan idam</p>
+
+        <div class="button-group">
+            <a href="kerjaan.html">Kerjaan</a>
+            <a href="yui.html">Keuangan</a>
+            <a href="profil.html">Profil</a>
         </div>
+    </div>
+</div>
 
-
-    </body>
+</body>
 </html>
