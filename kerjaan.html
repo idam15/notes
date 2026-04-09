@@ -7,7 +7,38 @@
     </head>
     <body style="background-image: url(naruto-uzumaki-3840x2160-25560.png); background-size: cover;">
         <h1 class="merah" style="position: fixed;" style="color: red style;" >KERJAAN</h1>
-        <p> </p>
+        <h2>Daftar Pekerjaan Saya</h2>
+<div id="tabel-kerjaan">Memuat data...</div>
+
+<script>
+  const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRp3PLgdmVfut5XFZhK1Pxm0yEQ2zvJcF_SqBwZofB9uM7fu9_wlxyXLS2ICMHPGezNDW1DGEUgclF9/pub?output=csv';
+
+  async function ambilData() {
+    const response = await fetch(url);
+    const data = await response.text();
+    const rows = data.split('\n').slice(1); // Lewati baris judul
+    
+    let html = '<table border="1" style="width:100%; border-collapse: collapse;">';
+    html += '<tr style="background:#eee;"><th>Tanggal</th><th>Pekerjaan</th><th>Status</th></tr>';
+    
+    rows.forEach(row => {
+      const columns = row.split(',');
+      if(columns.length >= 3) {
+        html += `<tr>
+                  <td>${columns[0]}</td>
+                  <td>${columns[1]}</td>
+                  <td>${columns[2]}</td>
+                </tr>`;
+      }
+    });
+    
+    html += '</table>';
+    document.getElementById('tabel-kerjaan').innerHTML = html;
+  }
+
+  ambilData();
+</script>
+
 
 
     </body>
