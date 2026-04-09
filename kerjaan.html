@@ -7,7 +7,6 @@
     </head>
     <body style="background-image: url(naruto-uzumaki-3840x2160-25560.png); background-size: cover;">
         <h1 class="merah" style="position: fixed;" style="color: red style;" >KERJAAN</h1>
-        <h2>Daftar Pekerjaan Saya</h2>
 <div id="tabel-kerjaan">Memuat data...</div>
 
 <script>
@@ -19,7 +18,7 @@
     const rows = data.split('\n').slice(1); // Lewati baris judul
     
     let html = '<table border="1" style="width:75%%; border-collapse: collapse;">';
-    html += '<tr style="background:#eee;"><th>Tanggal</th><th>Pekerjaan</th><th>Status</th></tr>';
+    html += '<tr style="background:trasnparent;"><th>Tanggal</th><th>Pekerjaan</th><th>Status</th></tr>';
     
     rows.forEach(row => {
       const columns = row.split(',');
